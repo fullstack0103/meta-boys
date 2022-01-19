@@ -11,6 +11,9 @@ import mintHero from './assets/images/mint-bg.png'
 import buttonBg from './assets/images/button-bg.png'
 import projectBg from './assets/images/project-bg.png'
 import faqBg from './assets/images/faq-bg.png'
+import roadMapTop from './assets/images/road-map-top.png'
+import roadMapMiddle from './assets/images/road-map-middle.png'
+import roadMapBottom from './assets/images/road-map-bottom.png'
 
 /**
  * Theme icons
@@ -30,7 +33,10 @@ theme.images = {
   mintHero,
   buttonBg,
   projectBg,
-  faqBg
+  faqBg,
+  roadMapTop,
+  roadMapMiddle,
+  roadMapBottom
 }
 
 theme.icons = {
