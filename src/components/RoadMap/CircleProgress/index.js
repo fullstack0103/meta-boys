@@ -9,7 +9,7 @@ export const CircleProgress = (props) => {
   } = props
 
   return (
-    <CircleProgressContainer>
+    <CircleProgressContainer percent={percent}>
       <div className="circle-wrap">
         <div className="circle">
           <div className="mask full">

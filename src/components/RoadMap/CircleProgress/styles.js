@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const CircleProgressContainer = styled.div`
   .circle-wrap {
@@ -42,12 +42,15 @@ export const CircleProgressContainer = styled.div`
   .mask .fill {
     clip: rect(0px, 38px, 76px, 0px);
     background-color: ${props => props.theme.colors.primary};
+    ${({ percent }) => percent === 100 && css`
+      background-color: ${props => props.theme.colors.green};
+    ` };
   }
 
   .mask.full,
   .circle .fill {
     animation: fill ease-in-out 3s;
-    transform: rotate(135deg);
+    transform: ${({ percent }) => `rotate(${3.6 * percent / 2}deg)` };
   }
 
   @keyframes fill{
@@ -55,7 +58,7 @@ export const CircleProgressContainer = styled.div`
       transform: rotate(0deg);
     }
     100% {
-      transform: rotate(135deg);
+      transform: ${({ percent }) => `rotate(${3.6 * percent / 2}deg)` };
     }
   }
 `

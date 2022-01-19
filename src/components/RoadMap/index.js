@@ -60,7 +60,7 @@ export const RoadMap = () => {
               <GradientCard>
                 <div className='gradient-header'>
                   <h1>The Knowledge</h1>
-                  <CircleProgress percent={20} />
+                  <CircleProgress percent={40} />
                 </div>
                 <p>MetaBoys understands that knowledge is power. We will provide exclusive access to a maximum of information in the biggest fields: <span>ENTREPRENEURSHIP, NFT, CRYPTO, ECOM, INVESTMENT, STARTUP. We have selected the biggest minds in the entrepreneurial world to bring you the latest information.</span></p>
                 <p>Members who will teach the community include, startup founders, renowned investors, whales, entrepreneurs and NFT collectors.</p>
