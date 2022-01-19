@@ -24,7 +24,7 @@ export const Team = () => {
     { id: 8, name: 'John Doe', position: 'Founder', photo: '/images/team-user-1.png' }
   ]
   return (
-    <TeamContainer>
+    <TeamContainer id='team'>
       <InnerContainer>
         <TitleWrapper>
           <Title>
