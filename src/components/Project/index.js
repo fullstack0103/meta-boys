@@ -7,7 +7,8 @@ import {
   Title,
   TitleWrapper,
   ContentWrapper,
-  DescriptionWrapper
+  DescriptionWrapper,
+  FlowLettersWrapper
 } from './styles'
 
 export const Project = () => {
@@ -15,19 +16,47 @@ export const Project = () => {
 
   return (
     <ProjectContainer>
-      <Content>
-        <TitleWrapper>
-          <Title>
-            <GradientCard />
-            <h1>THE PROJECT</h1>
-          </Title>
-        </TitleWrapper>
-        <ContentWrapper>
-          <DescriptionWrapper bgimage={theme.images.projectBg}>
+      <TitleWrapper>
+        <Title>
+          <GradientCard />
+          <h1>THE PROJECT</h1>
+        </Title>
+      </TitleWrapper>
+      <ContentWrapper bgimage={theme.images.projectBg}>
+        <GradientCard>
+        MetaBoys represents a NFT collection of <span>10101</span> boys categorized in different levels of rarity. These are stored on the Ethereum blockchain and hosted on IPFS. They boast the first collection of high-quality <span>3D human</span> models, and have a range of styles, expressions, outfits, and over 200 other features. 
+MetaBoys also contains the most stylish avatars in the Metaverse.
+Each NFT provides access to the world's most exclusive business community, where dedicated entrepreneurs and investors, wanting to learn from the best in their fields can be found. 
+The community plays host to all NFT enthusiasts, Crypto-currency, investments, among others. Here, access to exclusive information, networking events, masterminds in the world's largest cities, and renowned guests are just part of the package.
+        </GradientCard>
+      </ContentWrapper>
+      <FlowLettersWrapper>
+        <div>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+          <span>meta boys</span>
+        </div>
 
-          </DescriptionWrapper>
-        </ContentWrapper>
-      </Content>
+      </FlowLettersWrapper>
     </ProjectContainer>
   )
 }
