@@ -169,88 +169,117 @@ export const TeamMemberContainer = styled.div`
   }
 `
 export const Ellipse = styled.div`
+  position: absolute;
+  border: 1px solid ${props => props.theme.colors.white};
+  z-index: -1;
+  border-radius: 50%;
+
+
   ${({ index }) => index === 1 && css`
-    position: absolute;
-    height: 390px;
-    width: 230px;
-    border-radius: 50%;
-    border: 1px solid ${props => props.theme.colors.white};
-    z-index: -1;
-    transform: rotate(36deg);
-    top: -45px;
-  `}
-  ${({ index }) => index === 2 && css`
-    position: absolute;
     height: 300px;
-    width: 170px;
-    border-radius: 50%;
-    border: 1px solid ${props => props.theme.colors.white};
-    z-index: -1;
+    width: 200px;
+    transform: rotate(40deg);
+    top: -30px;
+  `}
+
+  ${({ index }) => index === 2 && css`
+    height: 280px;
+    width: 150px;
     transform: rotate(297deg);
-    bottom: -123px;
+    bottom: -105px;
   `}
   ${({ index }) => index === 3 && css`
-    position: absolute;
-    height: 300px;
+    height: 280px;
     width: 173px;
-    border-radius: 50%;
-    border: 1px solid ${props => props.theme.colors.white};
-    z-index: -1;
-    transform: rotate(45deg);
+    transform: rotate(42deg);
     top: -43px;
-    left: 25px;
+    left: 40px;
   `}
   ${({ index }) => index === 4 && css`
-    position: absolute;
-    height: 330px;
-    width: 210px;
-    border-radius: 50%;
-    border: 1px solid ${props => props.theme.colors.white};
-    z-index: -1;
+    height: 300px;
+    width: 180px;
     transform: rotate(311deg);
     top: -40px;
   `}
   ${({ index }) => index === 5 && css`
-    position: absolute;
-    height: 256px;
-    width: 148px;
-    border-radius: 50%;
-    border: 1px solid ${props => props.theme.colors.white};
-    z-index: -1;
+    height: 250px;
+    width: 140px;
     transform: rotate(66deg);
     bottom: -98px;
-    right: 16px;
+    right: 44px;
   `}
   ${({ index }) => index === 6 && css`
-    position: absolute;
-    height: 256px;
-    width: 148px;
-    border-radius: 50%;
-    border: 1px solid ${props => props.theme.colors.white};
-    z-index: -1;
+    height: 250px;
+    width: 140px;
     transform: rotate(49deg);
     top: -50px;
-    left: 34px;
+    left: 44px;
   `}
   ${({ index }) => index === 7 && css`
-    position: absolute;
-    height: 300px;
-    width: 173px;
-    border-radius: 50%;
-    border: 1px solid ${props => props.theme.colors.white};
-    z-index: -1;
+    height: 250px;
+    width: 140px;
     transform: rotate(45deg);
-    bottom: -90px;
-    left: 13px;
+    bottom: -78px;
+    left: 35px;
   `}
   ${({ index }) => index === 0 && css`
-    position: absolute;
-    height: 330px;
-    width: 210px;
-    border-radius: 50%;
-    border: 1px solid ${props => props.theme.colors.white};
-    z-index: -1;
+    height: 300px;
+    width: 180px;
     transform: rotate(45deg);
     top: -40px;
   `}
+  @media (min-width: 768px) {
+    ${({ index }) => index === 1 && css`
+      height: 390px;
+      width: 230px;
+      transform: rotate(36deg);
+      top: -45px;
+    `}
+    ${({ index }) => index === 2 && css`
+      height: 300px;
+      width: 170px;
+      transform: rotate(297deg);
+      bottom: -123px;
+    `}
+    ${({ index }) => index === 3 && css`
+      height: 300px;
+      width: 173px;
+      transform: rotate(45deg);
+      top: -43px;
+      left: 25px;
+    `}
+    ${({ index }) => index === 4 && css`
+      height: 330px;
+      width: 210px;
+      transform: rotate(311deg);
+      top: -40px;
+    `}
+    ${({ index }) => index === 5 && css`
+      height: 256px;
+      width: 148px;
+      transform: rotate(66deg);
+      bottom: -98px;
+      right: 16px;
+    `}
+    ${({ index }) => index === 6 && css`
+      height: 256px;
+      width: 148px;
+      transform: rotate(49deg);
+      top: -50px;
+      left: 34px;
+    `}
+    ${({ index }) => index === 7 && css`
+      height: 300px;
+      width: 173px;
+      transform: rotate(45deg);
+      bottom: -90px;
+      left: 13px;
+    `}
+    ${({ index }) => index === 0 && css`
+      height: 330px;
+      width: 210px;
+      transform: rotate(45deg);
+      top: -40px;
+    `}
+  }
 `
