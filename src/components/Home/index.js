@@ -16,9 +16,8 @@ export const Home = (props) => {
     <>
       <Mint />
       <Project />
-      <RoadMap />
       <InfiniteMarquee />
-
+      <RoadMap />
       <Team />
       <ShipMint />
       <InfiniteMarquee />
