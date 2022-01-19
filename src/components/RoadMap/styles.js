@@ -134,6 +134,7 @@ export const RightNumberWrapper = styled.div`
 `
 
 export const PointBox = styled.div`
+  position: relative;
   width: 28px;
   min-width: 28px;
   height: 28px;
