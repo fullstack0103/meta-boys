@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 50px 15px 0px 15px;
-  /* position: fixed; */
+  position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -41,6 +41,7 @@ export const LogoWrapper = styled.div`
 export const MenuListWrapper = styled.div`
   position: relative;
   height: 30px;
+  width: 118px;
 
   > div {
     position: absolute;

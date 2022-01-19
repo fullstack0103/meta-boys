@@ -14,14 +14,26 @@ export const Title = styled.div`
   
   > div {
     position: absolute;
-    width: 180px;
-    height: 53px;
-    left: -50px;
-    top: -20px
+    width: 97px;
+    height: 36px;
+    left: -34px;
+    top: -7px;
   }
   > h1 {
-    font-size: 63px;
+    font-size: 42px;
     margin: 0;
+  }
+  @media (min-width: 768px) {
+    > h1 {
+      font-size: 63px;
+    }
+
+    > div {
+      width: 136px;
+      height: 53px;
+      left: -41px;
+      top: -16px;
+    }
   }
   @media (min-width: 1440px) {
     > h1 {
@@ -38,8 +50,7 @@ export const Title = styled.div`
 
 export const ContentWrapperStyled = styled.div`
   display: flex;
-  height: 700px;
-  width: 90%;
+  padding: 30px 15px;
   ${({ bgimage }) => bgimage && css`
     background-repeat: no-repeat, repeat;
     background-size: contain;
@@ -48,12 +59,42 @@ export const ContentWrapperStyled = styled.div`
   `}
 
   > div {
-    width: 35%;
-    margin-left: 300px;
-    padding: 50px;
+    padding: 20px;
     height: fit-content;
-    span {
-      color: ${props => props.theme.colors.primary};
+
+    > p {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 300;
+      span {
+        color: ${props => props.theme.colors.primary};
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 90%;
+    padding-top: 80px;
+    height: 800px;
+
+    > div {
+      width: 60%;
+      max-width: 450px;
+      margin-left: 60px;
+      padding: 50px;
+
+      > p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    height: 700px;
+    > div {
+      margin-left: 200px;
+      max-width: 500px;
     }
   }
 
@@ -62,9 +103,14 @@ export const ContentWrapperStyled = styled.div`
     padding-top: 250px;
     margin-top: -150px;
     > div {
-      width: 37%;
       margin-left: 300px;
       padding: 50px;
+      max-width: 730px;
+
+      > p {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
   }
 `
