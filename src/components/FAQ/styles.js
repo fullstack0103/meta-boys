@@ -2,17 +2,28 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 export const FAQContainer = styled.div`
-  padding: 120px 15px;
+  padding: 60px 15px;
+
+  @media (min-width: 768px) {
+    padding: 80px 15px;
+  }
+  @media (min-width: 1440px) {
+    padding: 120px 15px;
+  }
 `
 export const InnerContainerStyled = styled.div`
-  max-width: 1184px;
   margin: 0px auto;
   ${({ bgimage }) => bgimage && css`
     background-repeat: no-repeat, repeat;
-    background-size: cover;
-    object-fit: cover;
+    background-size: contain;
+    object-fit: contain;
     background-position: center;
   `}
+
+  @media (min-width: 768px) {
+    max-width: 1184px;
+    width: 80%;
+  }
 `
 
 export const InnerContainer = (props) => {
@@ -29,6 +40,19 @@ export const InnerContainer = (props) => {
 export const TitleWrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: 992px) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 150px;
+  }
 `
 
 export const Title = styled.div`
@@ -36,15 +60,28 @@ export const Title = styled.div`
   
   > div {
     position: absolute;
-    width: 110px;
-    height: 40px;
-    right: -43px;
-    top: 7px;
+    width: 70px;
+    height: 25px;
+    right: -25px;
+    top: 5px;
     backdrop-filter: blur(7px);
   }
   > h1 {
-    font-size: 63px;
+    font-size: 42px;
     margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    > h1 {
+      font-size: 63px;
+    }
+
+    > div {
+      width: 110px;
+      height: 40px;
+      right: -43px;
+      top: 7px;
+    }
   }
   @media (min-width: 1440px) {
     > h1 {
@@ -55,7 +92,29 @@ export const Title = styled.div`
       height: 51px;
       right: -73px;
       top: 10px;
+    }
+  }
+`
 
+export const QuestionContainer = styled.div`
+  margin-bottom: 30px;
+  
+  > div {
+    padding: 18px;
+  }
+  
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+    > div {
+      padding: 18px 45px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 50px;
+
+    > div {
+      padding: 24px 60px;
     }
   }
 `
