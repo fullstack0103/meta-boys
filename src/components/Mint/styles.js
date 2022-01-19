@@ -28,17 +28,44 @@ export const MintContent = styled.div`
   width: 100%;
   padding: 15px;
 
-  > h1 {
-    font-size: 50px;
-    line-height: 75px;
-    margin-bottom: 52px; 
-  }
-
-  @media (min-width: 993px) {
+  @media (min-width: 768px) {
     width: 80%;
   }
 `
 
 export const ContentBox = styled.div`
-  width: 60%;
+  width: 100%;
+  
+  h1 {
+    font-size: 24px;
+    line-height: 40px;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: 768px) {
+    width: 70%;
+    h1 {
+      font-size: 32px;
+      line-height: 45px;
+      margin-bottom: 42px; 
+    }
+  }
+
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 42px;
+      line-height: 55px;
+      margin-bottom: 42px; 
+    }
+  }
+
+  @media (min-width: 1440px) {
+    width: 60%;
+    h1 {
+      font-size: 55px;
+      line-height: 65px;
+      margin-bottom: 52px;
+    }
+  }
 `

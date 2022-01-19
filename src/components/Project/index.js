@@ -3,12 +3,9 @@ import { GradientCard } from '../Shared'
 import { useTheme } from 'styled-components'
 import {
   ProjectContainer,
-  Content,
   Title,
   TitleWrapper,
-  ContentWrapper,
-  DescriptionWrapper,
-  FlowLettersWrapper
+  ContentWrapper
 } from './styles'
 
 export const Project = () => {
@@ -30,33 +27,6 @@ Each NFT provides access to the world's most exclusive business community, where
 The community plays host to all NFT enthusiasts, Crypto-currency, investments, among others. Here, access to exclusive information, networking events, masterminds in the world's largest cities, and renowned guests are just part of the package.
         </GradientCard>
       </ContentWrapper>
-      <FlowLettersWrapper>
-        <div>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-          <span>meta boys</span>
-        </div>
-
-      </FlowLettersWrapper>
     </ProjectContainer>
   )
 }

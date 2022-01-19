@@ -80,38 +80,3 @@ export const ContentWrapper = (props) => {
   )
 }
 
-export const FlowLettersWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  > div {
-    width: 100%;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    position: absolute;
-
-    span {
-      font-size: 25px;
-      display: inline-block;
-      animation: marquee 10s linear infinite;
-      margin: 0 20px;
-    }
-
-    @keyframes marquee {
-      0% {
-        transform: translate(0, 0);
-      }
-      100% {
-        transform: translate(-100%, 0);
-      }
-    }
-
-    @media(min-width: 1440px) {
-      span {
-        font-size: 37px;
-        white-space: nowrap;
-      }
-    }
-  }
-
-`

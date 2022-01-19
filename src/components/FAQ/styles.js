@@ -2,13 +2,13 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 export const FAQContainer = styled.div`
-  padding: 60px 15px;
+  padding: 20px 15px;
 
   @media (min-width: 768px) {
-    padding: 80px 15px;
+    padding: 30px 15px 80px 15px;
   }
   @media (min-width: 1440px) {
-    padding: 120px 15px;
+    padding: 45px 15px 120px 15px;
   }
 `
 export const InnerContainerStyled = styled.div`
