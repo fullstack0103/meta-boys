@@ -1,12 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import LineTo from 'react-lineto';
 import { useWindowSize } from '../../../hooks/useWindowSize'
 
 export const LineElements = () => {
   const { width } = useWindowSize()
+  const [status, setStatus] = useState(false)
 
   useEffect(() => {
-    console.log('ddd')
+    console.log(status)
+    const timer = setTimeout(() => {
+      setStatus(true)
+    }, 1);
+    return () => clearTimeout(timer);
   }, [width])
 
   return (
