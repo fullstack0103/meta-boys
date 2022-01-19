@@ -1,18 +1,7 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const ProjectContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-export const Content = styled.div`
-  width: 100%;
   padding-top: 90px;
-
-  @media (min-width: 993px) {
-    width: 80%;
-    padding-top: 90px;
-  }
 `
 
 export const TitleWrapper = styled.div`
@@ -45,4 +34,84 @@ export const Title = styled.div`
       top: -20px
     }
   }
+`
+
+export const ContentWrapperStyled = styled.div`
+  display: flex;
+  height: 700px;
+  width: 90%;
+  ${({ bgimage }) => bgimage && css`
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    object-fit: cover;
+    background-position: center;
+  `}
+
+  > div {
+    width: 35%;
+    margin-left: 300px;
+    padding: 50px;
+    height: fit-content;
+    span {
+      color: ${props => props.theme.colors.primary};
+    }
+  }
+
+  @media (min-width: 1440px) {
+    height: 938px;
+    padding-top: 250px;
+    margin-top: -150px;
+    > div {
+      width: 37%;
+      margin-left: 300px;
+      padding: 50px;
+    }
+  }
+`
+
+export const ContentWrapper = (props) => {
+  const style = {}
+  style.backgroundImage = `url(${props.bgimage})`
+
+  return (
+    <ContentWrapperStyled {...props} style={style}>
+      {props.children}
+    </ContentWrapperStyled>
+  )
+}
+
+export const FlowLettersWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  > div {
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+
+    span {
+      font-size: 25px;
+      display: inline-block;
+      animation: marquee 10s linear infinite;
+      margin: 0 20px;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-100%, 0);
+      }
+    }
+
+    @media(min-width: 1440px) {
+      span {
+        font-size: 37px;
+        white-space: nowrap;
+      }
+    }
+  }
+
 `
