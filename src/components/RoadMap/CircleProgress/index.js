@@ -10,15 +10,15 @@ export const CircleProgress = (props) => {
 
   return (
     <CircleProgressContainer>
-      <div class="circle-wrap">
-        <div class="circle">
-          <div class="mask full">
-            <div class="fill"></div>
+      <div className="circle-wrap">
+        <div className="circle">
+          <div className="mask full">
+            <div className="fill"></div>
           </div>
-          <div class="mask half">
-            <div class="fill"></div>
+          <div className="mask half">
+            <div className="fill"></div>
           </div>
-          <div class="inside-circle"> {percent}% </div>
+          <div className="inside-circle"> {percent}% </div>
         </div>
       </div>
     </CircleProgressContainer>

@@ -9,7 +9,10 @@ import {
   MiddleImage,
   BottomImage,
   ContentWrapper,
-  BoxWrapper
+  BoxWrapper,
+  LeftNumberWrapper,
+  PointBox,
+  RightNumberWrapper
 } from './styles'
 
 export const RoadMap = () => {
@@ -18,7 +21,11 @@ export const RoadMap = () => {
   return (
     <RoadMapContainer>
       <ContentWrapper>
-        <BoxWrapper>
+        <BoxWrapper isLeft>
+          <LeftNumberWrapper>
+            <PointBox><div /></PointBox>
+            <span>1</span>
+          </LeftNumberWrapper>
           <div className='gradient-box'>
             <GradientCard>
               <h1>The Rewards</h1>
@@ -36,8 +43,16 @@ export const RoadMap = () => {
               <p>MetaBoys believes in contributing to society and helping to create a better world. You too can participate in a cause to change the world by donating <span>$50,000</span> to one of 3 causes selected by the community: Humanitarian, Animal or Environmental.</p>
             </GradientCard>
           </div>
+          <RightNumberWrapper>
+            <span>2</span>
+            <PointBox><div /></PointBox>
+          </RightNumberWrapper>
         </BoxWrapper>
-        <BoxWrapper>
+        <BoxWrapper isLeft>
+          <LeftNumberWrapper>
+              <PointBox><div /></PointBox>
+              <span>3</span>
+            </LeftNumberWrapper>
           <div className='gradient-box'>
             <GradientCard>
               <div className='gradient-header'>
@@ -60,8 +75,16 @@ export const RoadMap = () => {
               <p>We will help you realize your biggest entrepreneurial dreams. We will select three community projects that we will fund. We plan on investing between <span>$100,000 to $400,000</span> to fund these projects. Community members will have the opportunity to invite others to join.  </p>
             </GradientCard>
           </div>
+          <RightNumberWrapper>
+            <span>4</span>
+            <PointBox><div /></PointBox>
+          </RightNumberWrapper>
         </BoxWrapper>
-        <BoxWrapper>
+        <BoxWrapper isLeft>
+          <LeftNumberWrapper>
+            <PointBox><div /></PointBox>
+            <span>5</span>
+          </LeftNumberWrapper>
           <div className='gradient-box'>
             <GradientCard>
               <div className='gradient-header'>
@@ -84,6 +107,10 @@ export const RoadMap = () => {
               <p>Members will enjoy free access to the <span>PRIVATE PARTIES</span> and luxury activities   where they will meet some of the best businessmen around.</p>
             </GradientCard>
           </div>
+          <RightNumberWrapper>
+            <span>6</span>
+            <PointBox><div /></PointBox>
+          </RightNumberWrapper>
         </BoxWrapper>
       </ContentWrapper>
       <BackgroundListWrapper>

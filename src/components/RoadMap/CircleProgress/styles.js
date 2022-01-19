@@ -28,8 +28,8 @@ export const CircleProgressContainer = styled.div`
     background: #100F17;
     line-height: 60px;
     text-align: center;
-    margin-top: 16px;
-    margin-left: 16px;
+    margin-top: 8px;
+    margin-left: 8px;
     position: absolute;
     z-index: 100;
     font-weight: 700;
