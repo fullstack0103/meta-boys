@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const ProjectContainer = styled.div`
   display: flex;
@@ -46,3 +46,35 @@ export const Title = styled.div`
     }
   }
 `
+
+export const ContentWrapper = styled.div`
+  display: flex;
+`
+
+export const DescriptionWrapperStyled = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  height: 700px;
+  width: 100%;
+  ${({ bgimage }) => bgimage && css`
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+  `}
+
+  @media (min-width: 1440px) {
+    height: 938px;
+  }
+`
+
+export const DescriptionWrapper = (props) => {
+  const style = {}
+  style.backgroundImage = `url(${props.bgimage})`
+
+  return (
+    <DescriptionWrapperStyled {...props} style={style}>
+      {props.children}
+    </DescriptionWrapperStyled>
+  )
+}

@@ -9,6 +9,7 @@ import theme from './theme.json'
  */
 import mintHero from './assets/images/mint-bg.png'
 import buttonBg from './assets/images/button-bg.png'
+import projectBg from './assets/images/project-bg.png'
 
 /**
  * Theme icons
@@ -26,7 +27,8 @@ theme.logos = {
 
 theme.images = {
   mintHero,
-  buttonBg
+  buttonBg,
+  projectBg
 }
 
 theme.icons = {
