@@ -58,7 +58,7 @@ export const FAQ = (props) => {
         </TitleWrapper>
 
         {questions.map(question => (
-          <QuestionContainer key={question.id}>
+          <QuestionContainer key={question.id} data-aos="fade-up">
             <GradientCard>
               <QuestionAccordion
                 question={question}

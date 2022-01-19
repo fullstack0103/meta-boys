@@ -43,7 +43,7 @@ export const Team = () => {
 
         <TeamMemersList>
           {teamUsers.map((user, index) => (
-            <TeamMemberContainer key={user.id}>
+            <TeamMemberContainer key={user.id}  data-aos="flip-left">
               <Ellipse
                 index={(index + 1) % 8}
               />

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useTheme } from 'styled-components'
 import { GradientCard } from '../Shared'
 import { CircleProgress } from './CircleProgress'
@@ -12,18 +12,30 @@ import {
   BoxWrapper,
   LeftNumberWrapper,
   PointBox,
-  RightNumberWrapper
+  RightNumberWrapper,
+  TitleWrapper,
+  Title,
+  BgWrapper
 } from './styles'
 import { LineElements } from './LineElements';
+import { useWindowSize } from '../../hooks/useWindowSize'
 
 export const RoadMap = () => {
   const theme = useTheme()
+  const { width } = useWindowSize()
 
   return (
     <>
-      <LineElements />
+      {width > 576 && <LineElements />}
       <RoadMapContainer id='roadmap'>
-        <ContentWrapper>
+        <TitleWrapper>
+          <Title>
+            <GradientCard />
+            <h1>ROADMAP</h1>
+          </Title>
+        </TitleWrapper>
+        <BgWrapper>
+          <ContentWrapper>
           <BoxWrapper isLeft>
             <LeftNumberWrapper>
               <PointBox id='d1' className='d1'><div /></PointBox>
@@ -60,7 +72,7 @@ export const RoadMap = () => {
               <GradientCard>
                 <div className='gradient-header'>
                   <h1>The Knowledge</h1>
-                  <CircleProgress percent={20} />
+                  <CircleProgress percent={40} />
                 </div>
                 <p>MetaBoys understands that knowledge is power. We will provide exclusive access to a maximum of information in the biggest fields: <span>ENTREPRENEURSHIP, NFT, CRYPTO, ECOM, INVESTMENT, STARTUP. We have selected the biggest minds in the entrepreneurial world to bring you the latest information.</span></p>
                 <p>Members who will teach the community include, startup founders, renowned investors, whales, entrepreneurs and NFT collectors.</p>
@@ -123,6 +135,7 @@ export const RoadMap = () => {
             <BottomImage src={theme.images.roadMapBottom} alt='bottom-road-map'  />
           </div>
         </BackgroundListWrapper>
+        </BgWrapper>
       </RoadMapContainer>
     </>
 
