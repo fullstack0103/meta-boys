@@ -5,7 +5,8 @@ import {
   HeaderContent,
   SocailWrapper,
   LogoWrapper,
-  MenuList
+  MenuItem,
+  MenuListWrapper
 } from './styles'
 
 export const Header = () => {
@@ -23,9 +24,14 @@ export const Header = () => {
         <LogoWrapper>
           <img src={theme.logos.bigLogo} alt='big-logo' />
         </LogoWrapper>
-        <MenuList>
-          menu
-        </MenuList>
+        <MenuListWrapper>
+          <div>
+            <MenuItem>MINT</MenuItem>
+            <MenuItem>ROADMAP</MenuItem>
+            <MenuItem>TEAM</MenuItem>
+            <MenuItem>FAQ</MenuItem>
+          </div>
+        </MenuListWrapper>
       </HeaderContent>
     </HeaderContainer>
   )
