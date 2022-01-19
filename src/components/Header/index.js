@@ -1,35 +1,64 @@
 import React from 'react'
 import { useTheme } from 'styled-components'
+import { SidebarMenu } from '../SidebarMenu'
+import {
+  TwitterIcon,
+  DiscordIcon,
+  OtherIcon,
+  InstagramIcon
+} from '../Shared/SvgIcons'
+
 import {
   HeaderContainer,
   HeaderContent,
   SocailWrapper,
   LogoWrapper,
   MenuItem,
-  MenuListWrapper
+  MenuListWrapper,
+  SocialLink
 } from './styles'
 
 export const Header = () => {
   const theme = useTheme()
 
+  const menuItems = [
+    { id: 1, name: 'MINT', value: 'mint' },
+    { id: 2, name: 'ROADMAP', value: 'roadmap' },
+    { id: 3, name: 'TEAM', value: 'team' },
+    { id: 4, name: 'FAQ', value: 'faq' }
+  ]
+
   return (
     <HeaderContainer>
       <HeaderContent>
+        <SidebarMenu />
         <SocailWrapper>
-          <img src={theme.icons.instagram} alt='instagram' />
-          <img src={theme.icons.twitter} alt='twitter' />
-          <img src={theme.icons.discord} alt='discord' />
-          <img src={theme.icons.other} alt='other' />
+          <SocialLink>
+            <InstagramIcon />
+          </SocialLink>
+          <SocialLink>
+            <TwitterIcon />
+          </SocialLink>
+          <SocialLink>
+            <DiscordIcon />
+          </SocialLink>
+          <SocialLink>
+            <OtherIcon />
+          </SocialLink>
         </SocailWrapper>
         <LogoWrapper>
           <img src={theme.logos.bigLogo} alt='big-logo' />
         </LogoWrapper>
         <MenuListWrapper>
           <div>
-            <MenuItem>MINT</MenuItem>
-            <MenuItem>ROADMAP</MenuItem>
-            <MenuItem>TEAM</MenuItem>
-            <MenuItem>FAQ</MenuItem>
+            {menuItems.map(menu => (
+              <MenuItem
+                active
+                key={menu.id}
+              >
+                <span>{menu.name}</span>
+              </MenuItem>
+            ))}
           </div>
         </MenuListWrapper>
       </HeaderContent>
