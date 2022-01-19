@@ -21,6 +21,8 @@ import {
 } from './styles'
 
 export const SidebarMenu = (props) => {
+  const [selectedMenu, setSelectedMenu] = useState('')
+
   const menuItems = [
     { id: 1, name: 'MINT', value: 'mint' },
     { id: 2, name: 'ROADMAP', value: 'roadmap' },
@@ -48,9 +50,31 @@ export const SidebarMenu = (props) => {
     }
   }, [width])
 
-  const handleMenuClick = () => {
+  const handleMenuClick = (index) => {
+    let topPos = 0
+    topPos = document.getElementById(index)?.offsetTop
+    window.scroll({
+      top: topPos,
+      left: 0,
+      behavior: 'smooth'
+    })
     actionSidebar(false)
   }
+  useEffect(() => {
+    const handleScroll = () => {
+      menuItems.forEach(menu => {
+        const windowTop = window.scrollY
+        let topPos = 0
+        topPos = document.getElementById(menu.value).offsetTop
+
+        if (Math.abs(windowTop - topPos) < 100) {
+          setSelectedMenu(menu.value)
+        }
+      })
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <Container>
@@ -72,8 +96,8 @@ export const SidebarMenu = (props) => {
           {menuItems.map(menu => (
             <MenuItem
               key={menu.id}
-              // active
-              onClick={() => handleMenuClick()}
+              active={selectedMenu === menu.value}
+              onClick={() => handleMenuClick(menu.value)}
             >
               {menu.name}
             </MenuItem>
