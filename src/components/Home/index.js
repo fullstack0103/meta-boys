@@ -9,6 +9,7 @@ import { FAQ } from '../FAQ'
 
 import {
 } from './styles'
+import { RoadMap } from '../RoadMap'
 
 export const Home = (props) => {
   return (
@@ -16,7 +17,7 @@ export const Home = (props) => {
       <Mint />
       <Project />
       <InfiniteMarquee />
-
+      <RoadMap />
       <Team />
       <ShipMint />
       <InfiniteMarquee />

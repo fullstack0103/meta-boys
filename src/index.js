@@ -13,6 +13,9 @@ import projectBg from './assets/images/project-bg.png'
 
 import shipBg from './assets/images/ship.png'
 import faqBg from './assets/images/faq-bg.png'
+import roadMapTop from './assets/images/road-map-top.png'
+import roadMapMiddle from './assets/images/road-map-middle.png'
+import roadMapBottom from './assets/images/road-map-bottom.png'
 
 /**
  * Theme icons
@@ -32,9 +35,11 @@ theme.images = {
   mintHero,
   buttonBg,
   projectBg,
-
-  shipBg,
-  faqBg
+  faqBg,
+  roadMapTop,
+  roadMapMiddle,
+  roadMapBottom,
+  shipBg
 }
 
 theme.icons = {
