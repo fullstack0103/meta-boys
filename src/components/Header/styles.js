@@ -38,4 +38,19 @@ export const LogoWrapper = styled.div`
   }
 `
 
-export const MenuList = styled.div``
+export const MenuListWrapper = styled.div`
+  position: relative;
+  height: 30px;
+
+  > div {
+    position: absolute;
+    right: 0px;
+  }
+`
+
+export const MenuItem = styled.div`
+  font-size: 18px;
+  padding: 15px;
+  text-align: right;
+  cursor: pointer;
+`
