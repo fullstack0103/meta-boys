@@ -2,6 +2,8 @@ import React from 'react'
 import { Mint } from '../Mint'
 import { Project } from '../Project'
 
+import { FAQ } from '../FAQ'
+
 import {
 } from './styles'
 
@@ -10,6 +12,8 @@ export const Home = (props) => {
     <>
       <Mint />
       <Project />
+
+      <FAQ />
     </>
   )
 }
