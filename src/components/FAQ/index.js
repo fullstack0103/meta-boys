@@ -48,7 +48,7 @@ export const FAQ = (props) => {
   ]
 
   return (
-    <FAQContainer>
+    <FAQContainer id='faq'>
       <InnerContainer bgimage={theme.images.faqBg}>
         <TitleWrapper>
           <Title>

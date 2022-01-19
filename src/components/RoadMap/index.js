@@ -22,7 +22,7 @@ export const RoadMap = () => {
   return (
     <>
       <LineElements />
-      <RoadMapContainer>
+      <RoadMapContainer id='roadmap'>
         <ContentWrapper>
           <BoxWrapper isLeft>
             <LeftNumberWrapper>

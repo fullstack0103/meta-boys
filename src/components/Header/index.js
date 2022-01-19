@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme } from 'styled-components'
 import { SidebarMenu } from '../SidebarMenu'
 import {
@@ -20,6 +20,7 @@ import {
 
 export const Header = () => {
   const theme = useTheme()
+  const [selectedMenu, setSelectedMenu] = useState('')
 
   const menuItems = [
     { id: 1, name: 'MINT', value: 'mint' },
@@ -27,6 +28,32 @@ export const Header = () => {
     { id: 3, name: 'TEAM', value: 'team' },
     { id: 4, name: 'FAQ', value: 'faq' }
   ]
+
+  const handleClickMenu = (index) => {
+    let topPos = 0
+    topPos = document.getElementById(index).offsetTop
+    window.scroll({
+      top: topPos,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      menuItems.forEach(menu => {
+        const windowTop = window.scrollY
+        let topPos = 0
+        topPos = document.getElementById(menu.value).offsetTop
+
+        if (Math.abs(windowTop - topPos) < 100) {
+          setSelectedMenu(menu.value)
+        }
+      })
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <HeaderContainer>
@@ -53,8 +80,9 @@ export const Header = () => {
           <div>
             {menuItems.map(menu => (
               <MenuItem
-                active
+                active={selectedMenu === menu.value}
                 key={menu.id}
+                onClick={() => handleClickMenu(menu.value)}
               >
                 <span>{menu.name}</span>
               </MenuItem>
