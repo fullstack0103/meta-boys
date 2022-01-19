@@ -10,6 +10,8 @@ import theme from './theme.json'
 import mintHero from './assets/images/mint-bg.png'
 import buttonBg from './assets/images/button-bg.png'
 import projectBg from './assets/images/project-bg.png'
+
+import shipBg from './assets/images/ship.png'
 import faqBg from './assets/images/faq-bg.png'
 import roadMapTop from './assets/images/road-map-top.png'
 import roadMapMiddle from './assets/images/road-map-middle.png'
@@ -36,7 +38,8 @@ theme.images = {
   faqBg,
   roadMapTop,
   roadMapMiddle,
-  roadMapBottom
+  roadMapBottom,
+  shipBg
 }
 
 theme.icons = {

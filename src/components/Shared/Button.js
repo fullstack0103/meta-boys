@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
 const ButtonContentWrapper = styled.div`
+  cursor: pointer;
   background: radial-gradient(191.99% 200.52% at 8.37% 0%, rgba(100, 0, 96, 0.36) 0%, rgba(55, 1, 53, 0.07) 100%);
   box-shadow: 0px 5.41544px 85px rgba(255, 0, 199, 0.8);
   backdrop-filter: blur(20.3079px);
@@ -11,6 +12,10 @@ const ButtonContentWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
+  &:hover {
+    background: radial-gradient(51.99% 100.52% at 8.37% 0%, rgba(100, 0, 96, 0.36) 0%, rgba(55, 1, 53, 0.07) 100%);
+  }
 `
 export const ButtonContainerStyled = styled.div`
   width: 277px;

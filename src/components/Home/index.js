@@ -2,6 +2,9 @@ import React from 'react'
 import { Mint } from '../Mint'
 import { Project } from '../Project'
 
+import { Team } from '../Team'
+import { ShipMint } from '../ShipMint'
+import { InfiniteMarquee } from '../InfiniteMarquee'
 import { FAQ } from '../FAQ'
 
 import {
@@ -14,7 +17,11 @@ export const Home = (props) => {
       <Mint />
       <Project />
       <RoadMap />
+      <InfiniteMarquee />
 
+      <Team />
+      <ShipMint />
+      <InfiniteMarquee />
       <FAQ />
     </>
   )
