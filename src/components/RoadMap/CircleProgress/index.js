@@ -9,7 +9,7 @@ export const CircleProgress = (props) => {
   } = props
 
   return (
-    <CircleProgressContainer percent={percent}>
+    <CircleProgressContainer percent={percent} data-aos="fade-zoom-in">
       <div className="circle-wrap">
         <div className="circle">
           <div className="mask full">
