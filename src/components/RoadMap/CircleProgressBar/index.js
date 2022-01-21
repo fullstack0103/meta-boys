@@ -23,7 +23,7 @@ export const CircleProgressBar = (props) => {
               <stop offset="100%" stopColor='#e91e63' />
             </linearGradient>
           </defs>
-          <circle cx='40' cy='40' r='30' stroke-linecap='round' />
+          <circle cx='40' cy='40' r='35' stroke-linecap='round' />
         </svg>
       </div>
     </CircleProgressBarContainer>

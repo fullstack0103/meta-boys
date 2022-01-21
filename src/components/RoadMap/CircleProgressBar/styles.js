@@ -40,7 +40,7 @@ export const CircleProgressBarContainer = styled.div`
     ${({ percent }) => percent === 100 && css`
       stroke: ${props => props.theme.colors.green};
     ` };
-    stroke-width: 12px;
+    stroke-width: 10px;
     stroke-dasharray: 190;
     stroke-dashoffset: 190;
     animation: fill ease-in 2s infinite;
