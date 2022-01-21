@@ -88,17 +88,18 @@ export const MenuListWrapper = styled.div`
 
 export const MenuItem = styled.div`
   font-size: 18px;
-  padding: 10px;
-  text-align: right;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
 
   span {
-    cursor: pointer;
     position: relative;
     font-size: 18px;
     color: ${props => props.theme.colors.white};
-    &:hover {
-      color: ${props => props.theme.colors.primary};
-    }
+    padding: 5px 20px;
+    position: relative;
+    display: flex;
+    z-index: 10;
   }
 
   ${({ active }) => active && css`
@@ -127,9 +128,47 @@ export const MenuItem = styled.div`
   `}
 
   @media (min-width: 1440px) {
-    padding: 15px;
     span {
       font-size: 24px;
+    }
+  }
+`
+export const NameWrapper = styled.div`
+  padding: 2px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    > span {
+      color: ${props => props.theme.colors.primary};
+      background: radial-gradient(191.99% 200.52% at 8.37% 0%, rgba(100, 0, 96, 0.36) 0%, rgba(55, 1, 53, 0.07) 100%);
+      box-shadow: 0px 5.41544px 85px rgba(255, 0, 199, 0.8);
+      backdrop-filter: blur(20.3079px);
+    }
+    > div {
+      display: block;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      width: calc(100% + 30px);
+      padding-top: 40px;
+      border: 1px solid #FFF;
+      transform: rotate(353deg);
+      left: -15px;
+      top: 0px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &:hover {
+      &::after {
+        width: calc(100% + 40px);
+        padding-top: 45px;
+        left: -20px;
+        top: 0px;
+      }
     }
   }
 `
