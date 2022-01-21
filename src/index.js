@@ -16,7 +16,11 @@ import faqBg from './assets/images/faq-bg.png'
 import roadMapTop from './assets/images/road-map-top.png'
 import roadMapMiddle from './assets/images/road-map-middle.png'
 import roadMapBottom from './assets/images/road-map-bottom.png'
+import roadMapTop1 from './assets/images/road-map-top-1.png'
+import roadMapMiddle1 from './assets/images/road-map-middle-1.png'
+import roadMapBottom1 from './assets/images/road-map-bottom-1.png'
 import roadMapOverlay from './assets/images/road-map-overlay.png'
+import bgImage from './assets/images/bg-image.png'
 
 /**
  * Theme icons
@@ -40,8 +44,12 @@ theme.images = {
   roadMapTop,
   roadMapMiddle,
   roadMapBottom,
+  roadMapTop1,
+  roadMapMiddle1,
+  roadMapBottom1,
   shipBg,
-  roadMapOverlay
+  roadMapOverlay,
+  bgImage
 }
 
 theme.icons = {

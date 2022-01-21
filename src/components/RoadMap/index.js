@@ -130,9 +130,9 @@ export const RoadMap = () => {
         </ContentWrapper>
         <BackgroundListWrapper>
           <div>
-            <TopImage src={theme.images.roadMapTop} alt='top-road-map'  />
-            <MiddleImage src={theme.images.roadMapMiddle} alt='middle-road-map'  />
-            <BottomImage src={theme.images.roadMapBottom} alt='bottom-road-map'  />
+            <TopImage src={width > 1440 ? theme.images.roadMapTop : theme.images.roadMapTop1} alt='top-road-map'  />
+            <MiddleImage src={width > 1440 ? theme.images.roadMapMiddle : theme.images.roadMapMiddle1} alt='middle-road-map'  />
+            <BottomImage src={width > 1440 ? theme.images.roadMapBottom : theme.images.roadMapBottom1} alt='bottom-road-map'  />
           </div>
         </BackgroundListWrapper>
         </BgWrapper>

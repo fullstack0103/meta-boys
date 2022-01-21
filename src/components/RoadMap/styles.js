@@ -6,6 +6,7 @@ export const RoadMapContainer = styled.div`
 
 export const BgWrapper = styled.div`
   position: relative;
+  padding-bottom: 20px;
 `
 
 export const BackgroundListWrapper = styled.div`
@@ -23,14 +24,72 @@ export const BackgroundListWrapper = styled.div`
     justify-content: flex-end;
     align-items: center;
 
-    > img {
-      height: 350px;
+    /* > img {
+      height: 400px;
     }
 
     @media (min-width: 768px) {
-      > img {
-        height: 500px;
-      }
+        > img {
+          height: 650px;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        > img {
+          height: 900px;
+        }
+    } */
+`
+
+export const TopImage = styled.img`
+  position: absolute;
+  left: 0px;
+
+  @media (min-width: 768px) {
+    height: 700px;
+    top: -30px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 900px;
+    top: initial;
+  }
+`
+
+export const MiddleImage = styled.img`
+  position: absolute;
+  right: 0px;
+  top: 350px;
+
+  @media (min-width: 768px) {
+    height: 700px;
+    bottom: 0px;
+    left: 0px;
+    top: initial;
+  }
+
+  @media (min-width: 1440px) {
+    right: 0px;
+    left: initial;
+    top: 350px;
+    height: 900px;
+  }
+`
+
+export const BottomImage = styled.img`
+  position: absolute;
+
+  @media (min-width: 768px) {
+    height: 700px;
+    bottom: initial;
+    top: 430px;
+  }
+
+  @media (min-width: 1440px) {
+    top: initial;
+    bottom: 0px;
+    right: 0px;
+    height: 900px;
   }
 `
 
@@ -73,25 +132,9 @@ export const Title = styled.div`
       width: 270px;
       height: 70px;
       left: -80px;
-      top: -20px
+      top: -20px;
     }
   }
-`
-
-export const TopImage = styled.img`
-  position: absolute;
-  top: 0px;
-  left: 0px;
-`
-
-export const MiddleImage = styled.img`
-
-`
-
-export const BottomImage = styled.img`
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
 `
 
 export const ContentWrapper = styled.div`
