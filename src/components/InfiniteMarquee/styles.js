@@ -24,8 +24,8 @@ export const MarqueeContainer = styled.div`
   }
 
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
   }
 
   @media (min-width: 1440px) {
