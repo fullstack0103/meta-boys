@@ -16,12 +16,21 @@ import {
 
 export const Footer = () => {
   const theme = useTheme()
-  const menus = [
-    { id: 1, name: 'mint' },
-    { id: 2, name: 'roadmap' },
-    { id: 3, name: 'team' },
-    { id: 4, name: 'fag' },
+  const menuItems = [
+    { id: 1, name: 'mint', value: 'mint' },
+    { id: 2, name: 'roadmap', value: 'roadmap' },
+    { id: 3, name: 'team', value: 'team' },
+    { id: 4, name: 'faq', value: 'faq' }
   ]
+  const handleClickMenu = (index) => {
+    let topPos = 0
+    topPos = document.getElementById(index)?.offsetTop
+    window.scroll({
+      top: topPos,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
 
   return (
     <FooterContainer>
@@ -46,9 +55,10 @@ export const Footer = () => {
         </LogoWrapper>
 
         <MenuLinksWrapper>
-          {menus.map(menu => (
+          {menuItems.map(menu => (
             <MenuLink
               key={menu.id}
+              onClick={() => handleClickMenu(menu.value)}
             >
               {menu.name}
             </MenuLink>

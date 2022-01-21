@@ -170,10 +170,41 @@ export const TeamMemberContainer = styled.div`
 `
 export const Ellipse = styled.div`
   position: absolute;
-  border: 1px solid ${props => props.theme.colors.white};
+  /* border: 1px solid ${props => props.theme.colors.white}; */
   z-index: -1;
   border-radius: 50%;
 
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation: glow 1s linear infinite;
+    z-index: -1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: #100f17;
+  }
+
+  @keyframes glow {
+    0% {
+      filter: hue-rotate(10deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
 
   ${({ index }) => index === 1 && css`
     height: 300px;

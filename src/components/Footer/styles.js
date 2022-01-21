@@ -47,6 +47,8 @@ export const SocialLink = styled.a`
   cursor: pointer;
 
   svg {
+    transition: all 0.3s;
+
     &:hover {
       path {
         fill: ${props => props.theme.colors.primary};
@@ -91,6 +93,11 @@ export const MenuLink = styled.div`
   cursor: pointer;
   color: ${props => props.theme.colors.white};
   font-size: 18px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: ${props => props.theme.colors.primary};
+  }
 
   @media (min-width: 1440px) {
     font-size: 20px;

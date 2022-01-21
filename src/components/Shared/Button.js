@@ -12,9 +12,32 @@ const ButtonContentWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s;
+`
+export const ButtonOuterGlowContainer = styled.div`
+  width: 234px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  @keyframes glow {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
   &:hover {
-    background: radial-gradient(51.99% 100.52% at 8.37% 0%, rgba(100, 0, 96, 0.36) 0%, rgba(55, 1, 53, 0.07) 100%);
+    > div {
+      background: #100f17;
+    }
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation: glow 1.2s linear infinite;
+
   }
 `
 export const ButtonContainerStyled = styled.div`
@@ -47,9 +70,11 @@ export const Button = (props) => {
 
   return (
     <ButtonContainer bgimage={theme.images.buttonBg}>
-      <ButtonContentWrapper>
-        {props.children}
-      </ButtonContentWrapper>
+      <ButtonOuterGlowContainer>
+        <ButtonContentWrapper>
+          {props.children}
+        </ButtonContentWrapper>
+      </ButtonOuterGlowContainer>
     </ButtonContainer>
   )
 }

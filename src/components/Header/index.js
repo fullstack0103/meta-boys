@@ -15,7 +15,8 @@ import {
   LogoWrapper,
   MenuItem,
   MenuListWrapper,
-  SocialLink
+  SocialLink,
+  NameWrapper
 } from './styles'
 
 export const Header = () => {
@@ -84,7 +85,9 @@ export const Header = () => {
                 key={menu.id}
                 onClick={() => handleClickMenu(menu.value)}
               >
-                <span>{menu.name}</span>
+                <NameWrapper>
+                  <span>{menu.name}</span>
+                </NameWrapper>
               </MenuItem>
             ))}
           </div>
