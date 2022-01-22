@@ -42,7 +42,6 @@ export const CircleProgressBarContainer = styled.div`
   }
   circle {
     fill: none;
-    /* stroke: url(#GradientColor); */
     stroke: ${props => props.theme.colors.primary};
     ${({ percent }) => percent === 100 && css`
       stroke: ${props => props.theme.colors.green};
@@ -50,11 +49,19 @@ export const CircleProgressBarContainer = styled.div`
     stroke-width: 10px;
     stroke-dasharray: 220;
     stroke-dashoffset: 220;
-    animation: ${({ percent }) => fillEffect(220 - 220 * percent / 100)} ease-in 2s forwards;
   }
   svg {
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  &.aos-init {
+    &.aos-animate {
+      circle {
+        animation-iteration-count: infinite;
+        animation: ${({ percent }) => fillEffect(220 - 220 * percent / 100)} linear 1s forwards;
+      }
+    }
   }
 `

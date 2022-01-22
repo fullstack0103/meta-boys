@@ -8,7 +8,7 @@ export const CircleProgressBar = (props) => {
 
   return (
     <>
-      <CircleProgressBarContainer percent={percent}>
+      <CircleProgressBarContainer percent={percent} data-aos='fade'>
         <div className='skill'>
           <div className='outer'>
             <div className='inner'>

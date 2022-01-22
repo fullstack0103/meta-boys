@@ -56,21 +56,25 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const goToLink = (location) => {
+    window.open(location, '_blank')
+  }
+
   return (
     <HeaderContainer>
       <HeaderContent>
         <SidebarMenu />
         <SocailWrapper>
-          <SocialLink>
+          <SocialLink href='https://instagram.com/meta3oys' target='_blank'>
             <InstagramIcon />
           </SocialLink>
-          <SocialLink>
+          <SocialLink href='https://twitter.com/meta3oys' target='_blank'>
             <TwitterIcon />
           </SocialLink>
-          <SocialLink>
+          <SocialLink href='https://discord.gg/metaboys' target='_blank'>
             <DiscordIcon />
           </SocialLink>
-          <SocialLink>
+          <SocialLink href='https://opensea.io/collection/meta3oys' target='_blank'>
             <OtherIcon />
           </SocialLink>
         </SocailWrapper>
