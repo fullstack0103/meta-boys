@@ -49,7 +49,7 @@ export const CircleProgressContainer = styled.div`
 
   .mask.full,
   .circle .fill {
-    animation: fill ease-in-out 3s;
+    animation: fill ease-in-out 2s infinite;
     transform: ${({ percent }) => `rotate(${3.6 * percent / 2}deg)` };
   }
 
