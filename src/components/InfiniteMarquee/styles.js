@@ -16,8 +16,8 @@ export const MarqueeContainer = styled.div`
     animation: marquee 32s linear infinite;
 
     .content {
-      span {
-        font-size: 24px;
+      img {
+        height: 24px;
         margin: 0 10px;
       }
     }
@@ -33,8 +33,8 @@ export const MarqueeContainer = styled.div`
 
     .track {
       .content {
-        span {
-          font-size: 32px;
+        img {
+          height: 32px;
           margin: 0 15px;
         }
       }
