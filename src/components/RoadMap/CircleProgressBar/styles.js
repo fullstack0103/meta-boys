@@ -1,4 +1,10 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
+
+const fillEffect = (percent) => keyframes`
+  100% {
+    stroke-dashoffset: ${percent};
+  }
+`
 
 export const CircleProgressBarContainer = styled.div`
   .skill {
@@ -44,17 +50,11 @@ export const CircleProgressBarContainer = styled.div`
     stroke-width: 10px;
     stroke-dasharray: 220;
     stroke-dashoffset: 220;
-    animation: fill ease-in 2s forwards;
+    animation: ${({ percent }) => fillEffect(220 - 220 * percent / 100)} ease-in 2s forwards;
   }
   svg {
     position: absolute;
     top: 0;
     left: 0;
-  }
-
-  @keyframes fill {
-    100% {
-      stroke-dashoffset: ${({ percent }) => 220 - 220 * percent / 100 };
-    }
   }
 `
