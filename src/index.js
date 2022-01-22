@@ -31,9 +31,11 @@ import other from './assets/icons/other.png'
 import discord from './assets/icons/discord.png'
 
 import bigLogo from './assets/images/big-logo.png'
+import textLogo from './assets/images/text-logo.png'
 
 theme.logos = {
-  bigLogo
+  bigLogo,
+  textLogo
 }
 
 theme.images = {
