@@ -29,21 +29,22 @@ export const CircleProgressBarContainer = styled.div`
     background: #131118;
   }
 
-  #number {
+  .number {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
   }
   circle {
     fill: none;
-    stroke: url(#GradientColor);
+    /* stroke: url(#GradientColor); */
+    stroke: ${props => props.theme.colors.primary};
     ${({ percent }) => percent === 100 && css`
       stroke: ${props => props.theme.colors.green};
     ` };
     stroke-width: 10px;
-    stroke-dasharray: 190;
-    stroke-dashoffset: 190;
-    animation: fill ease-in 2s infinite;
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+    animation: fill ease-in 2s forwards;
   }
   svg {
     position: absolute;
@@ -53,7 +54,7 @@ export const CircleProgressBarContainer = styled.div`
 
   @keyframes fill {
     100% {
-      stroke-dashoffset: ${({ percent }) => 190 - 190 * percent / 100 };
+      stroke-dashoffset: ${({ percent }) => 220 - 220 * percent / 100 };
     }
   }
 `
