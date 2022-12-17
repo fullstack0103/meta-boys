@@ -14,6 +14,7 @@ import AOS from "aos";
 
 export const App = () => {
   const onlineStatus = useOnlineStatus()
+
     /****** Animation effect ******/
     useEffect(() => {
       AOS.init({
